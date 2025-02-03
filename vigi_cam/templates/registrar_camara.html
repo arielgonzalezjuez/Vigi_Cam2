@@ -1,0 +1,131 @@
+{% extends "base.html" %}{% load static %} {% block content %}
+<!-- contact -->
+<div class="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="titlepage text_align_center">
+          <h2>Registrar Cámara</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row d_flex">
+      <div class="col-md-6">
+        <form
+          id="request"
+          class="main_form"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          {% csrf_token %}
+          <div class="row">
+            <div class="col-md-12">
+              <input
+                class="contactus"
+                placeholder="Ubicación"
+                type="text"
+                name="nombreC"
+                id="nombreC"
+                value="{{ camara.nombreC }}"
+              />
+            </div>
+            <div class="col-md-12">
+              <input
+                class="contactus"
+                placeholder="Numero IP de la camara"
+                type="text"
+                name="numero_ip"
+                id="numero_ip"
+                value="{{ persona.numero_ip }}"
+              />
+            </div>
+            <div class="col-md-12">
+              <input
+                class="contactus"
+                placeholder="Puerto"
+                type="text"
+                name="puerto"
+                id="puerto"
+                value="{{ camara.puerto }}"
+              />
+            </div>
+            <div class="col-md-12">
+              <button class="send_btn">Registrar Cámara</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <div class="contact_img">
+          <figure>
+            <img src="{% static "images/contact_img.png" %}" alt="#" />
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- contact -->
+{% endblock %} {% comment %} {% extends "base.html" %} {% block content %}
+<main class="container">
+  <div class="row">
+    <h1 class="text-center mt-2">Registrar Camara</h1>
+
+    <div class="col-md-4 offset-md-4 mt-3">
+      <form
+        class="card card-body text-center"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        {% csrf_token %}
+
+        <div class="mb-3">
+          <label for="nombreC" class="form-label">Ubicacion</label>
+          <input
+            type="text"
+            class="form-control {% if formC.nombreC.errors and camara.nombreC == '' %}is-invalid{% endif %}"
+            name="nombreC"
+            id="nombreC"
+            value="{{ camara.nombreC }}"
+          />
+          {% for error in formC.nombreC.errors %}
+          <div class="invalid-feedback">{{ error }}</div>
+          {% endfor %}
+        </div>
+
+        <div class="mb-3">
+          <label for="numero_ip" class="form-label"
+            >Numero IP de la camara</label
+          >
+          <input
+            type="text"
+            class="form-control {% if formC.numero_ip.errors and persona.numero_ip == '' %}is-invalid{% endif %}"
+            name="numero_ip"
+            id="numero_ip"
+            value="{{ persona.numero_ip }}"
+          />
+          {% for error in formC.numero_ip.errors %}
+          <div class="invalid-feedback">{{ error }}</div>
+          {% endfor %}
+        </div>
+
+        <div class="mb-3">
+          <label for="puerto" class="form-label">Puerto</label>
+          <input
+            type="text"
+            class="form-control {% if formC.puerto.errors and camara.puerto == '' %}is-invalid{% endif %}"
+            name="puerto"
+            id="puerto"
+            value="{{ camara.puerto }}"
+          />
+          {% for error in formC.puerto.errors %}
+          <div class="invalid-feedback">{{ error }}</div>
+          {% endfor %}
+        </div>
+
+        <button class="btn btn-primary" type="submit">Registrar</button>
+      </form>
+    </div>
+  </div>
+</main>
+{% endblock %} {% endcomment %}

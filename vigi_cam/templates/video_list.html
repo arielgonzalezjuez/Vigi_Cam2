@@ -1,0 +1,73 @@
+{% extends "base.html" %}  {% block content %}
+      <!-- cameras -->
+      <div class="cameras">
+         <div class="container-max">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage text_align_center">
+                     <h2>Listado de Videos Capturados</h2>
+                  </div>
+               </div>
+            </div>
+                  <div class="row">
+                     {% for video in videos %}
+                     <div class="col-md-3">
+                        <div id="ho_bg" class="cameras_text">
+                            <div class="cameras_img text_align_center">
+                               <video src="{{ video.file.url }}" autoplay  width="320" height="240" controls>
+                                 {{ video.file }}
+                                </video>
+                            </div>
+                              <a href="{{ video.file.url }}" target="_blank"><p> {{ video.title }}</p></a>                          
+                            <form action="{% url 'eliminar_video' video.id %}" method="POST" style="display:inline;">
+                              {% csrf_token %}
+                              <button class="read_more" type="submit">Eliminar</button>
+                          </form>
+                       
+                        </div>
+                     </div>
+                    
+                 {% endfor %}
+                    
+                   
+                 
+
+
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end cameras -->
+   
+{% endblock %}
+
+<!-- mi_app/templates/mi_app/videos.html -->
+{% comment %} 
+<!-- lista_videos.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Videos</title>
+</head>
+<body>
+    <h1>Videos Grabados</h1>
+    <ul>
+        {% for video in videos %}
+            <li>
+               <video width="320" height="240" controls>
+                  <source src="{{ video.file.url }}" type="video/mp4">
+                  Tu navegador no soporta la etiqueta de video.
+                 </video>
+                <a href="{{ video.file.url }}" target="_blank">{{ video.title }}</a>
+                
+                <form action="{% url 'eliminar_video' video.id %}" method="POST" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit">Eliminar</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html> {% endcomment %}

@@ -1,0 +1,378 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+ 
+<!-- start slider section -->
+<div  class=" banner_main">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+     <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+     </ol>
+     <div class="carousel-inner">
+        <div class="carousel-item active">
+           <div class="container-max">
+              <div class="carousel-caption relative">
+                <div class="row">
+                   <div class="col-md-6">
+                     <div class="bluid">
+                      <h1>Security  <br><span>Anywhere CCTV
+                       Camera</span></h1>
+                      <a class="read_more" href="Javascript:void(0)">Read More </a>
+                      <a class="read_more" href="{% url "contact" %}">Contact Us </a>
+                     </div>
+                   </div>
+                   <div class="col-md-6">
+                      <div class="pan_img">
+                         <figure><img src="{% static "images/top_img.png" %}" alt="#"/></figure>
+                      </div>
+                   </div>
+                </div>
+              </div>
+           </div>
+        </div>
+        <div class="carousel-item">
+           <div class="container-max">
+              <div class="carousel-caption relative">
+               <div class="row">
+                   <div class="col-md-6">
+                     <div class="bluid">
+                      <h1>Security  <br><span>Anywhere CCTV
+                       Camera</span></h1>
+                      <a class="read_more" href="Javascript:void(0)">Read More </a>
+                      <a class="read_more" href="{% url "contact" %}">Contact Us </a>
+                     </div>
+                   </div>
+                   <div class="col-md-6">
+                      <div class="pan_img">
+                         <figure><img src="{% static "images/top_img.png" %}" alt="#"/></figure>
+                      </div>
+                   </div>
+                </div>
+              </div>
+           </div>
+        </div>
+        <div class="carousel-item">
+           <div class="container-max">
+              <div class="carousel-caption relative">
+                <div class="row">
+                   <div class="col-md-6">
+                     <div class="bluid">
+                      <h1>Security  <br><span>Anywhere CCTV
+                       Camera</span></h1>
+                      <a class="read_more" href="Javascript:void(0)">Read More </a>
+                      <a class="read_more" href="{% url "contact" %}">Contact Us </a>
+                     </div>
+                   </div>
+                   <div class="col-md-6">
+                      <div class="pan_img">
+                         <figure><img src="{% static "images/top_img.png" %}" alt="#"/></figure>
+                      </div>
+                   </div>
+                </div>
+              </div>
+           </div>
+        </div>
+     </div>
+     <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+     <i class="fa fa-angle-left" aria-hidden="true"></i>
+     <span class="sr-only">Previous</span>
+     </a>
+     <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+     <i class="fa fa-angle-right" aria-hidden="true"></i>
+     <span class="sr-only">Next</span>
+     </a>
+  </div>
+</div>
+</div>
+</div>
+<!-- end slider section -->
+<!-- about -->
+<div  class="about">
+<div class="container">
+<div class="row d_flex d_grid">
+<div class="col-md-6">
+  <div class="about_img">
+     <figure><img class="img_responsive" src="{% static "images/about1.png" %}" alt="#"/></figure>
+  </div>
+</div>
+<div class="col-md-5 offset-md-1 order_1_mobile">
+  <div class="titlepage text_align_left">
+       <h2>About cctv</h2>
+        <p>it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+       <a class="read_more" href="{% url "about" %}">Read More</a>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<!-- end about -->
+<!-- cameras -->
+<div class="cameras">
+<div class="container-max">
+<div class="row">
+<div class="col-md-12">
+  <div class="titlepage text_align_center">
+     <h2>Our CCTV Cameras</h2>
+  </div>
+</div>
+</div>
+  <div class="row">
+     <div class="col-md-4">
+        <div id="ho_bg" class="cameras_text">
+            <div class="cameras_img text_align_center">
+              <figure><img src="{% static "images/camera1.png" %}" alt="#"/></figure>
+            </div>
+            <p>Price<br><span>$5000.00</span></p>
+           <h3>CCTV Camera</h3>
+           <a class="read_more" href="{% url "cameras" %}">Buy Now</a>
+        </div>
+     </div>
+      <div class="col-md-4">
+        <div id="ho_bg" class="cameras_text">
+            <div class="cameras_img text_align_center">
+              <figure><img src="{% static "images/camera2.png" %}" alt="#"/></figure>
+            </div>
+            <p>Price<br><span>$5000.00</span></p>
+           <h3>CCTV Camera</h3>
+           <a class="read_more" href="{% url "cameras" %}">Buy Now</a>
+        </div>
+     </div>
+      <div class="col-md-4">
+        <div id="ho_bg" class="cameras_text">
+            <div class="cameras_img text_align_center">
+              <figure><img src="{% static "images/camera3.png" %}" alt="#"/></figure>
+            </div>
+            <p>Price<br><span>$5000.00</span></p>
+           <h3>CCTV Camera</h3>
+           <a class="read_more" href="{% url "cameras" %}">Buy Now</a>
+        </div>
+     </div>
+      <div class="col-md-4">
+        <div id="ho_bg" class="cameras_text">
+            <div class="cameras_img text_align_center">
+              <figure><img src="{% static "images/camera4.png" %}" alt="#"/></figure>
+            </div>
+            <p>Price<br><span>$5000.00</span></p>
+           <h3>CCTV Camera</h3>
+           <a class="read_more" href="{% url "cameras" %}">Buy Now</a>
+        </div>
+     </div>
+      <div class="col-md-4">
+        <div id="ho_bg" class="cameras_text">
+            <div class="cameras_img text_align_center">
+              <figure><img src="{% static "images/camera5.png" %}" alt="#"/></figure>
+            </div>
+            <p>Price<br><span>$5000.00</span></p>
+           <h3>CCTV Camera</h3>
+           <a class="read_more" href="{% url "cameras." %}">Buy Now</a>
+        </div>
+     </div>
+      <div class="col-md-4">
+        <div id="ho_bg" class="cameras_text">
+            <div class="cameras_img text_align_center">
+              <figure><img src="{% static "images/camera6.png" %}" alt="#"/></figure>
+            </div>
+            <p>Price<br><span>$5000.00</span></p>
+           <h3>CCTV Camera</h3>
+           <a class="read_more" href="cameras.html">Buy Now</a>
+        </div>
+     </div>
+     <div class="col-md-12">
+       <div class="see_camera">
+          <a class="read_more" href="cameras.html">See More</a>
+       </div>
+     </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<!-- end cameras -->
+<!-- projects -->
+<div class="choose">
+<div class="choose_bg">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+  <div class="titlepage text_align_center">
+     <h2>Why choose People</h2>
+  </div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3 col-sm-6">
+  <div class="comp text_align_left">
+    <i><img src="{% static "images/cho_icon1.png" %}" alt="#"/></i>
+    <h3>1000</h3>
+    <span>Company</span>
+  </div>
+</div>
+<div class="col-md-3 col-sm-6">
+  <div class="comp text_align_left">
+    <i><img src="{% static "images/cho_icon2.png" %}" alt="#"/></i>
+    <h3>1000</h3>
+    <span>Lock Installed</span>
+  </div>
+</div>
+<div class="col-md-3 col-sm-6">
+  <div class="comp text_align_left">
+    <i><img src="{% static "images/cho_icon3.png" %}" alt="#"/></i>
+    <h3>1000</h3>
+    <span>Sell CCTV</span>
+  </div>
+</div>
+<div class="col-md-3 col-sm-6">
+  <div class="comp text_align_left">
+    <i><img src="{% static "images/cho_icon4.png" %}" alt="#"/></i>
+    <h3>1000</h3>
+    <span>Happy Customers</span>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<div class="container-with">
+<div class="row">
+<div class="col-md-12">
+<div class="cctv">
+<figure><img src="{% static "images/cctv.png" %}" alt="#"/></figure>
+<a class="read_more" href="javascript:void(0)">Read More</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- end choose -->
+<!-- clients -->
+<div class="clients">
+<div class="clients_bg">
+<div class="container">
+<div class="row">
+  <div class="col-sm-12">
+     <div class="titlepage text_align_center">
+        <h2>What says Clients</h2>
+     </div>
+  </div>
+</div>
+</div>
+</div>
+<!-- start slider section -->
+<div id="testi" class="carousel slide clients_banner" data-ride="carousel">
+<ol class="carousel-indicators">
+<li data-target="#testi" data-slide-to="0" class="active"></li>
+<li data-target="#testi" data-slide-to="1"></li>
+<li data-target="#testi" data-slide-to="2"></li>
+</ol>
+<div class="carousel-inner">
+<div class="carousel-item active">
+  <div class="container">
+     <div class="carousel-caption testi">
+        <div class="row d_flex">
+           <div class="col-md-12">
+            <div class="cli_flef">
+              <div class="pro_file">
+                 <i><img class="text_align_right" src="{% static "images/test2.png" %}" alt="#"/></i>
+              </div>
+              <div class="test_box text_align_left">
+                 <h4>Monsons <img src="{% static "images/ter.png" %}" alt="#"/></h4>
+                 <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,</p>
+              </div>
+            </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</div>
+<div class="carousel-item">
+  <div class="container">
+     <div class="carousel-caption testi">
+        <div class="row d_flex">
+           <div class="col-md-12">
+            <div class="cli_flef">
+              <div class="pro_file">
+                 <i><img src="{% static "images/test2.png" %}" alt="#"/></i>
+              </div>
+              <div class="test_box text_align_left">
+                 <h4>Monsons <img src="{% static "images/ter.png" %}" alt="#"/></h4>
+                 <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,</p>
+              </div>
+            </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</div>
+<div class="carousel-item">
+  <div class="container">
+     <div class="carousel-caption testi">
+        <div class="row d_flex">
+           <div class="col-md-12">
+            <div class="cli_flef">
+              <div class="pro_file">
+                 <i><img src="{% static "images/test2.png" %}" alt="#"/></i>
+              </div>
+              <div class="test_box text_align_left">
+                 <h4>Monsons <img src="{% static "images/ter.png" %}" alt="#"/></h4>
+                 <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,</p>
+              </div>
+            </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</div>
+</div>
+<a class="carousel-control-prev" href="#testi" role="button" data-slide="prev">
+<i class="fa fa-angle-left" aria-hidden="true"></i>
+<span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" href="#testi" role="button" data-slide="next">
+<i class="fa fa-angle-right" aria-hidden="true"></i>
+<span class="sr-only">Next</span>
+</a>
+</div>
+</div>
+<!-- end clients -->
+<!-- contact -->
+<div class="contact">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+  <div class="titlepage text_align_center">
+     <h2>Reqeste a call back</h2>
+  </div>
+</div>
+</div>
+<div class="row d_flex">
+<div class="col-md-6">
+  <form id="request" class="main_form">
+     <div class="row">
+        <div class="col-md-12 ">
+           <input class="contactus" placeholder="Name" type="type" name=" Name"> 
+        </div>
+        <div class="col-md-12">
+           <input class="contactus" placeholder="Email" type="type" name="Email">                          
+        </div>
+        <div class="col-md-12">
+           <input class="contactus" placeholder="Phone" type="type" name="Phone Number">                          
+        </div>
+        <div class="col-md-12">
+           <textarea class="textarea" placeholder="Message" type="type" Message="Name"></textarea>
+        </div>
+        <div class="col-md-12">
+           <button class="send_btn">Send</button>
+        </div>
+     </div>
+  </form>
+</div>
+<div class="col-md-6">
+ <div class="contact_img">
+   <figure><img src="{% static "images/contact_img.png" %}" alt="#" /></figure>
+ </div>
+</div>
+</div>
+</div>
+</div>
+<!-- contact -->
+{% endblock %}
+

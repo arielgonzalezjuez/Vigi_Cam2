@@ -1,0 +1,186 @@
+{% extends "base.html" %}{% load static %} {% block content %}
+<!-- contact -->
+<div class="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="titlepage text_align_center">
+          <h2>{{ title }}</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row d_flex">
+      <div class="col-md-6">
+        <form
+          id="request"
+          class="main_form"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          {% csrf_token %}
+          <div class="row">
+            <div class="col-md-12">
+              <input
+                class="contactus"
+                placeholder="Nombre"
+                type="text"
+                name="nombre"
+                id="nombre"
+                value="{{ persona.nombre }}"
+              />
+            </div>
+            <div class="col-md-12">
+              <input
+                class="contactus"
+                placeholder="Carnet de Identidad"
+                type="text"
+                name="carnet_identidad"
+                id="carnet_identidad"
+                value="{{ persona.carnet_identidad }}"
+              />
+            </div>
+            <div class="col-md-12">
+              <input
+                class="contactus"
+                placeholder="Cargo"
+                type="text"
+                name="cargo"
+                id="cargo"
+                value="{{ persona.cargo }}"
+              />
+            </div>
+            <div class="col-md-12">
+              <label>Hora de Entrada</label>
+              <input
+                class="contactus"
+                placeholder="Hora de Entrada"
+                type="time"
+                name="horaE"
+                id="horaE"
+                value="{{ persona.horaE }}"
+              />
+            </div>
+            <div class="col-md-12">
+              <label>Hora de Salida</label>
+              <input
+                class="contactus"
+                placeholder="Hora de Salida"
+                type="time"
+                name="horaS"
+                id="horaS"
+                value="{{ persona.horaS }}"
+              />
+            </div>
+            <div class="col-md-12">
+              <input
+                class="contactus"
+                type="file"
+                name="imagen"
+                id="imagen"
+                value="{{ persona.imagen }}"
+              />
+            </div>
+            {% comment %}
+            <div class="col-md-12">
+              <textarea
+                class="textarea"
+                placeholder="Message"
+                type="type"
+                Message="Name"
+              ></textarea>
+            </div>
+            {% endcomment %}
+            <div class="col-md-12">
+              <button class="send_btn">Registrar Personal</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <div class="contact_img">
+          <figure>
+            <img src="{% static "images/contact_img.png" %}" alt="#" />
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- contact -->
+{% endblock %} {% comment %} {% extends "base.html" %} {% block content %}
+<main class="container">
+  <div class="row">
+    <h1 class="text-center mt-2">{{ title }}</h1>
+
+    <div class="col-md-4 offset-md-4 mt-3">
+      <form
+        class="card card-body text-center"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        {% csrf_token %}
+
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input
+            type="text"
+            class="form-control {% if form.nombre.errors and persona.nombre == '' %}is-invalid{% endif %}"
+            name="nombre"
+            id="nombre"
+            value="{{ persona.nombre }}"
+          />
+          {% for error in form.nombre.errors %}
+          <div class="invalid-feedback">{{ error }}</div>
+          {% endfor %}
+        </div>
+
+        <div class="mb-3">
+          <label for="carnet_identidad" class="form-label"
+            >Carnet de Identidad</label
+          >
+          <input
+            type="text"
+            class="form-control {% if form.carnet_identidad.errors and persona.carnet_identidad == '' %}is-invalid{% endif %}"
+            name="carnet_identidad"
+            id="carnet_identidad"
+            value="{{ persona.carnet_identidad }}"
+          />
+          {% for error in form.carnet_identidad.errors %}
+          <div class="invalid-feedback">{{ error }}</div>
+          {% endfor %}
+        </div>
+
+        <div class="mb-3">
+          <label for="cargo" class="form-label">Cargo</label>
+          <input
+            type="text"
+            class="form-control {% if form.cargo.errors and persona.cargo == '' %}is-invalid{% endif %}"
+            name="cargo"
+            id="cargo"
+            value="{{ persona.cargo }}"
+          />
+          {% for error in form.cargo.errors %}
+          <div class="invalid-feedback">{{ error }}</div>
+          {% endfor %}
+        </div>
+
+        <div class="mb-3">
+          <label for="imagen" class="form-label">Selecciona una imagen</label>
+          <input
+            class="form-control {% if form.imagen.errors and persona.imagen == '' %}is-invalid{% endif %}"
+            type="file"
+            name="imagen"
+            id="imagen"
+            value="{{ persona.imagen }}"
+          />
+          {% for error in form.imagen.errors %}
+          <div class="invalid-feedback">{{ error }}</div>
+          {% endfor %}
+        </div>
+
+        <button class="btn btn-primary" type="submit">Registrar</button>
+      </form>
+    </div>
+  </div>
+</main>
+{% endblock %} {% endcomment %}

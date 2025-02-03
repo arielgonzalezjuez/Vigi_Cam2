@@ -1,0 +1,45 @@
+{% extends "base.html" %}{% load static %}{% block content %}
+<!-- about -->
+<div class="about">
+  <div class="container">
+    <div class="row d_flex d_grid">
+      <div class="col-md-6">
+        <div class="about_img">
+          <figure>
+            <img class="img_responsive" src="{% static "images/about1.png" %}"
+            alt="#"/>
+          </figure>
+        </div>
+      </div>
+      <div class="col-md-5 offset-md-1 order_1_mobile">
+        <div class="titlepage text_align_left">
+          <h2>Acerca de Nosotros</h2>
+          <p>
+            Todo comenzó con una problemática recurrente en grandes empresas: la
+            necesidad de garantizar la seguridad sin ralentizar las operaciones
+            diarias. Las credenciales físicas como tarjetas de acceso y llaves
+            habían probado ser ineficaces frente a extravíos o manipulaciones.
+            Además, los sistemas tradicionales de videovigilancia solo ofrecían
+            un monitoreo pasivo que dependía de la supervisión humana. Fue
+            entonces cuando un grupo de ingenieros y desarrolladores decidió
+            fusionar dos tecnologías clave: la inteligencia artificial aplicada
+            a la videovigilancia y la gestión automatizada de acceso en tiempo
+            real. Su meta era crear una solución robusta que no solo controlara
+            entradas y salidas, sino que también proporcionará análisis útiles
+            para mejorar la gestión de recursos humanos y aumentar la seguridad.
+            VIGI CAM opera como una plataforma centralizada que integra cámaras
+            de videovigilancia, sensores de movimiento y terminales de acceso
+            inteligentes. Todo el sistema está interconectado y administrado
+            desde una aplicación web intuitiva y personalizable. VIGI CAM no es
+            solo una aplicación web; es el futuro de la seguridad y la gestión
+            empresarial, proporcionando tranquilidad y eficiencia a empresas de
+            todo el mundo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end about -->
+
+{% endblock %}

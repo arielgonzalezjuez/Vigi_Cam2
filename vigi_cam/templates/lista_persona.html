@@ -1,0 +1,51 @@
+{% extends "base.html" %}  {% block content %}
+      <!-- cameras -->
+      <div class="cameras">
+         <div class="container-max">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage text_align_center">
+                     <h2>Listado de Trabajadores</h2>
+                  </div>
+               </div>
+            </div>
+                  <div class="row">
+                    {% for persona in personas %}
+                     <div class="col-md-3">
+                        <div id="ho_bg" class="cameras_text">
+                            <div class="cameras_img text_align_center">
+                              <figure><img style="  object-fit: cover;
+                                max-width: 250px;
+                                max-height: 250px;
+                                width: auto;
+                                height: auto;" src="{{ persona.imagen.url }}" alt="#"/></figure>
+                            </div>
+                            <p>{{ persona.nombre }}<br><span>{{ persona.carnet_identidad }}</span></p>
+                           <h3>{{ persona.cargo }}</h3>
+                           <p>E: {{ persona.horaE }} <span>S: {{ persona.horaS }}</span></p>
+                          
+                          
+                           <a class="read_more" href="{% url 'editar_persona' persona.id %}">Editar</a>
+                          
+                           <a class="read_more" href="{% url 'eliminar_persona' persona.id %}">Eliminar</a>
+                       
+                        </div>
+                     </div>
+                     {% endfor %}
+                     
+                    
+                      
+                     
+                     <div class="col-md-12">
+                       <div class="see_camera">
+                          <a class="read_more" href="{% url 'registrar_persona' %}">Registrar nueva persona</a>
+                       </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end cameras -->
+   
+{% endblock %}

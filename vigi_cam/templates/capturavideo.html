@@ -1,0 +1,8 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block content %}
+{% csrf_token %}
+
+<img src="{% url 'capturaVideo' %}" alt="" class="img-fluid" onerror="this.onerror=null; this.src='{% static 'images/camara.jpg' %}';" >
+{% endblock %}
